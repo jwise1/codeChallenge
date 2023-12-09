@@ -9,4 +9,6 @@ First version: interact with chat application to fine tune goals using SMART met
 
 Second version: interact with chat application to fine tune goals using SMART attributes. Took previous user answers into account as well as overall goal. 
 
+Third version: interact with chat application to fine tune goals using SMART attributes. Took previous user answers into account as well as overall goal. Added formatting changes to prompts that made slight differences, but none noteworthy.
+
 
