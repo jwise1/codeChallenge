@@ -24,23 +24,23 @@ def formQuestion(message,newMessage,i):
         newMessage=message
     else:
         if i==1:
-            prompt="""Write a question about breaking down the following goal more specifically: """+message+""" while also considering """+newMessage
+            prompt="""Write a question about breaking down the steps to the following goal more specifically: """+message
             q=pipe(prompt,max_new_tokens=25,eos_token_id=tokenizer.eos_token_id)
             newMessage=talkToUser(q)
         if i==2:
-            prompt="""Write a question about how to measure the goal: """+message+""" while also considering """+newMessage
+            prompt="""Write a question about how to measure the goal: """+message+""" while also considering the previous answer to how to meet the goal: """+newMessage
             q=pipe(prompt,max_new_tokens=25,eos_token_id=tokenizer.eos_token_id)
             newMessage=talkToUser(q)
         if i==3:
-            prompt="""Write a question about how achievable the goal is: """+message+""" while also considering """+newMessage
+            prompt="""Write a question about how achievable the goal is: """+message+""" while also considering the previous answer to how to meet the goal: """+newMessage
             q=pipe(prompt,max_new_tokens=25,eos_token_id=tokenizer.eos_token_id)
             newMessage=talkToUser(q)
         if i==4:
-            prompt="""Write a question about how relevant the goal is overall: """+message+""" while also considering """+newMessage
+            prompt="""Write a question about how relevant the goal is overall: """+message+""" while also considering the previous answer to how to meet the goal: """+newMessage
             q=pipe(prompt,max_new_tokens=25,eos_token_id=tokenizer.eos_token_id)
             newMessage=talkToUser(q)
         if i==5:
-            prompt="""Write a question about the how much time it will take to complete the goal: """+message+""" while also considering """+newMessage
+            prompt="""Write a question about the how much time it will take to complete the goal: """+message+""" while also considering the previous answer to how to meet the goal: """+newMessage
             q=pipe(prompt,max_new_tokens=25,eos_token_id=tokenizer.eos_token_id)
             newMessage=talkToUser(q)
 
