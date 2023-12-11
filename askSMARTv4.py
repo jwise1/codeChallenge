@@ -21,7 +21,6 @@ def formQuestion(message):
     attr=["specific","measurable","achievable","relevant","time-based"]
     for i in attr:
         prompt=f"""Write a question about completing the following goal: "{message}", in a "{i}" way."""
-        print(prompt)
         q=pipe(prompt,max_new_tokens=25,eos_token_id=tokenizer.eos_token_id)
         newMessage=talkToUser(q)
         followUp(newMessage,message,i)
